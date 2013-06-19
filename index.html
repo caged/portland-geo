@@ -10,9 +10,8 @@
     #map { position:absolute; top:0; bottom:0; width:100%; }
   </style>
 <script>
- var map = L.mapbox.map('map', 'caged.map-qa2i17ab').setView([44, -100], 2)
+  var map = L.mapbox.map('map', 'caged.map-qa2i17ab').setView([44, -100], 2)
  
-  map.addLayer(layer)
   d3.json('pdx.geojson', function(error, data) {
     var layer = L.geoJson(data, { style: { color: '#333', weight: 1 }})
     map.addLayer(layer)
