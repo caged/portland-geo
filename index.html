@@ -12,7 +12,7 @@
 <script>
   var map = L.mapbox.map('map', 'caged.map-qa2i17ab').setView([44, -100], 2)
  
-  d3.json('pdx.geojson', function(error, data) {
+  d3.json('water.json', function(error, data) {
     var layer = L.geoJson(data, { style: { color: '#333', weight: 1 }})
     map.addLayer(layer)
   })
